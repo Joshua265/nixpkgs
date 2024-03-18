@@ -4646,7 +4646,7 @@
           name = "markdown-editor";
           publisher = "zaaack";
           version = "0.1.10";
-          sha256 = "sha256-TOEekl0/k46AYDgXQ9AhRmU6MVkPHb5kXiR3dpb3L1E=";
+          sha256 = "sha256-K1nczR059BsiHpT1xdtJjpFLl5krt4H9+CrEsIycq9U=";
         };
         meta = {
           license = lib.licenses.mit;
