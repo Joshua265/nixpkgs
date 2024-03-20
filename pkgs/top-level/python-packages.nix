@@ -361,6 +361,8 @@ self: super: with self; {
 
   aioquic = callPackage ../development/python-modules/aioquic { };
 
+  aioraven = callPackage ../development/python-modules/aioraven { };
+
   aiorecollect = callPackage ../development/python-modules/aiorecollect { };
 
   aioredis = callPackage ../development/python-modules/aioredis { };
@@ -1684,6 +1686,8 @@ self: super: with self; {
 
   boxx = callPackage ../development/python-modules/boxx { };
 
+  bpemb = callPackage ../development/python-modules/bpemb { };
+
   bpycv = callPackage ../development/python-modules/bpycv {};
 
   bpython = callPackage ../development/python-modules/bpython { };
@@ -1950,6 +1954,8 @@ self: super: with self; {
   connection-pool = callPackage ../development/python-modules/connection-pool { };
 
   connio = callPackage ../development/python-modules/connio { };
+
+  conway-polynomials = callPackage ../development/python-modules/conway-polynomials {};
 
   correctionlib = callPackage ../development/python-modules/correctionlib { };
 
@@ -4444,6 +4450,8 @@ self: super: with self; {
 
   frozenlist = callPackage ../development/python-modules/frozenlist { };
 
+  frozenlist2 = callPackage ../development/python-modules/frozenlist2 { };
+
   fs = callPackage ../development/python-modules/fs { };
 
   fs-s3fs = callPackage ../development/python-modules/fs-s3fs { };
@@ -4992,6 +5000,8 @@ self: super: with self; {
   graphene = callPackage ../development/python-modules/graphene { };
 
   graphene-django = callPackage ../development/python-modules/graphene-django { };
+
+  graphlib-backport = callPackage ../development/python-modules/graphlib-backport { };
 
   graphqlclient= callPackage ../development/python-modules/graphqlclient { };
 
@@ -6991,6 +7001,8 @@ self: super: with self; {
 
   mariadb = callPackage ../development/python-modules/mariadb { };
 
+  marimo = callPackage ../development/python-modules/marimo { };
+
   marisa = callPackage ../development/python-modules/marisa {
     inherit (pkgs) marisa;
   };
@@ -8750,6 +8762,8 @@ self: super: with self; {
 
   python-nvd3 = callPackage ../development/python-modules/python-nvd3 { };
 
+  python-secp256k1-cardano = callPackage ../development/python-modules/python-secp256k1-cardano { };
+
   python-tds = callPackage ../development/python-modules/python-tds { };
 
   python-yate = callPackage ../development/python-modules/python-yate { };
@@ -8836,6 +8850,8 @@ self: super: with self; {
   olefile = callPackage ../development/python-modules/olefile { };
 
   oletools = callPackage ../development/python-modules/oletools { };
+
+  ollama = callPackage ../development/python-modules/ollama { };
 
   omegaconf = callPackage ../development/python-modules/omegaconf { };
 
@@ -9938,6 +9954,8 @@ self: super: with self; {
 
   plumbum = callPackage ../development/python-modules/plumbum { };
 
+  pluthon = callPackage ../development/python-modules/pluthon { };
+
   plux = callPackage ../development/python-modules/plux { };
 
   ply = callPackage ../development/python-modules/ply { };
@@ -10288,8 +10306,6 @@ self: super: with self; {
   py-sr25519-bindings = callPackage ../development/python-modules/py-sr25519-bindings { };
 
   py-tes = callPackage ../development/python-modules/py-tes { };
-
-  py-tree-sitter = callPackage ../development/python-modules/py-tree-sitter { };
 
   py-ubjson = callPackage ../development/python-modules/py-ubjson { };
 
@@ -16125,6 +16141,8 @@ self: super: with self; {
   update-copyright = callPackage ../development/python-modules/update-copyright { };
 
   update-dotdee = callPackage ../development/python-modules/update-dotdee { };
+
+  uplc = callPackage ../development/python-modules/uplc { };
 
   upnpy = callPackage ../development/python-modules/upnpy { };
 
