@@ -161,7 +161,7 @@ rustPlatform.buildRustPackage rec {
     changelog = "https://github.com/zed-industries/zed/releases/tag/v${version}";
     license = licenses.gpl3Only;
     maintainers = with maintainers; [ GaetanLepage niklaskorz ];
-    mainProgram = "zed";
+    mainProgram = "zed-editor";
     platforms = platforms.all;
   };
 }
