@@ -1,28 +1,28 @@
-{ lib
-, rustPlatform
-, fetchFromGitHub
-, curl
-, pkg-config
-, protobuf
-, xcbuild
-, fontconfig
-, freetype
-, libgit2
-, openssl
-, sqlite
-, zlib
-, zstd
-, alsa-lib
-, libxkbcommon
-, wayland
-, xorg
-, stdenv
-, darwin
-, vulkan-loader
+{
+  lib,
+  rustPlatform,
+  fetchFromGitHub,
+  curl,
+  pkg-config,
+  protobuf,
+  xcbuild,
+  fontconfig,
+  freetype,
+  libgit2,
+  openssl,
+  sqlite,
+  zlib,
+  zstd,
+  alsa-lib,
+  libxkbcommon,
+  wayland,
+  xorg,
+  stdenv,
+  darwin,
+  vulkan-loader,
 }:
-
 rustPlatform.buildRustPackage rec {
-  pname = "zed";
+  pname = "zed-editor";
   version = "0.126.3";
 
   src = fetchFromGitHub {
@@ -85,44 +85,49 @@ rustPlatform.buildRustPackage rec {
     };
   };
 
-  nativeBuildInputs = [
-    curl
-    pkg-config
-    protobuf
-    rustPlatform.bindgenHook
-  ] ++ lib.optionals stdenv.isDarwin [
-    xcbuild.xcrun
-  ];
+  nativeBuildInputs =
+    [
+      curl
+      pkg-config
+      protobuf
+      rustPlatform.bindgenHook
+    ]
+    ++ lib.optionals stdenv.isDarwin [
+      xcbuild.xcrun
+    ];
 
-  buildInputs = [
-    curl
-    fontconfig
-    freetype
-    libgit2
-    openssl
-    sqlite
-    zlib
-    zstd
-  ] ++ lib.optionals stdenv.isLinux [
-    alsa-lib
-    libxkbcommon
-    wayland
-    xorg.libxcb
-  ] ++ lib.optionals stdenv.isDarwin (with darwin.apple_sdk.frameworks; [
-    AppKit
-    CoreAudio
-    CoreFoundation
-    CoreGraphics
-    CoreMedia
-    CoreServices
-    CoreText
-    Foundation
-    IOKit
-    Metal
-    Security
-    SystemConfiguration
-    VideoToolbox
-  ]);
+  buildInputs =
+    [
+      curl
+      fontconfig
+      freetype
+      libgit2
+      openssl
+      sqlite
+      zlib
+      zstd
+    ]
+    ++ lib.optionals stdenv.isLinux [
+      alsa-lib
+      libxkbcommon
+      wayland
+      xorg.libxcb
+    ]
+    ++ lib.optionals stdenv.isDarwin (with darwin.apple_sdk.frameworks; [
+      AppKit
+      CoreAudio
+      CoreFoundation
+      CoreGraphics
+      CoreMedia
+      CoreServices
+      CoreText
+      Foundation
+      IOKit
+      Metal
+      Security
+      SystemConfiguration
+      VideoToolbox
+    ]);
 
   buildFeatures = [
     "gpui/runtime_shaders"
@@ -160,7 +165,7 @@ rustPlatform.buildRustPackage rec {
     homepage = "https://zed.dev";
     changelog = "https://github.com/zed-industries/zed/releases/tag/v${version}";
     license = licenses.gpl3Only;
-    maintainers = with maintainers; [ GaetanLepage niklaskorz ];
+    maintainers = with maintainers; [GaetanLepage niklaskorz];
     mainProgram = "zed-editor";
     platforms = platforms.all;
   };
