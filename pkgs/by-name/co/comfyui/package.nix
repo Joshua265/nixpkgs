@@ -42,7 +42,7 @@ let
   pythonEnv = (python311.withPackages (ps: with ps; [
     (
       if gpuBackend == "cuda"
-      then torch-bin torchvision-bin
+      then torch-bin
       else if gpuBackend == "rocm"
       then torchWithRocm
       else torch
