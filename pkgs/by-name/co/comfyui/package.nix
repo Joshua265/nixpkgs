@@ -93,6 +93,7 @@ in
       gperf
       unzip
       cudatoolkit
+      cudaPackages.cudnn
       linuxPackages.nvidia_x11
       libGLU
       xorg.libXi
